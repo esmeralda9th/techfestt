@@ -65,3 +65,8 @@ nav li {
     padding:10px;      
 }
 
+.task input {
+    opacity: 0;
+
+}
+
