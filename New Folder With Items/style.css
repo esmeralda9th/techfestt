@@ -65,6 +65,48 @@ nav li {
     padding:10px;      
 }
 
+.input-container input {
+    flex: 1;
+    margin-right: 15px;
+    padding: 10px;
+    border: 0px solid #ccc;
+}
+ 
+.input-container button{
+    padding: 10px 23px;
+    background: #007bff;
+    color: rgb(255, 255, 255);
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}      
+ 
+button:hover {
+    background: #a1b4c6;
+}
+ 
+.container{
+    position: absolute;
+    align-items: center;
+}
+ 
+ 
+.button{
+   position: absolute;
+    bottom: 5px;  
+}
+ 
+.container-speak{
+    margin-top: 50px;
+    position: fixed;
+    bottom: 5px;
+    left: 5px;
+}
+
+.speak {
+    padding: 25%;
+}
+
 .task {
     padding: 10px;
     background: rgb(255, 255, 255);
