@@ -74,7 +74,7 @@ nav li {
  
 .input-container button{
     padding: 10px 23px;
-    background: #007bff;
+    background: #3e6691;
     color: rgb(255, 255, 255);
     border: none;
     cursor: pointer;
@@ -82,7 +82,7 @@ nav li {
 }      
  
 button:hover {
-    background: #a1b4c6;
+    background: #a8c4dd;
 }
  
 .container{
@@ -107,6 +107,9 @@ button:hover {
     padding: 25%;
 }
 
+#all_complete{
+    margin-top: 10px;
+}
 .task {
     padding: 10px;
     background: rgb(255, 255, 255);
