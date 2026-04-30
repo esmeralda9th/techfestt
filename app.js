@@ -81,25 +81,35 @@ function renderTasks() {
   }
 }
 
-// --- Agregar una nueva tarea ---
-
 function addTask() {
   var input = document.querySelector(".input-container input");
   var text = input.value.trim();
 
-  if (text === "") return; // No agregar tareas vacías
+
+  var date = document.querySelector(".date-input").value;
+  var time = document.querySelector(".time-input").value;
+
+  if (text === "") return;
 
   var tasks = getTasks();
   var newTask = {
-    id: Date.now(), // ID único usando la hora actual
+    id: Date.now(),
     text: text,
-    completed: false
+    completed: false,
+    
+   
+    date: date,
+    time: time
   };
 
   tasks.push(newTask);
   saveTasks(tasks);
   renderTasks();
-  input.value = ""; // Limpiar el input
+
+  input.value = "";
+
+  document.querySelector(".date-input").value = "";
+  document.querySelector(".time-input").value = "";
 }
 
 // --- Marcar todas las tareas como completadas ---
@@ -195,3 +205,4 @@ if (document.title === "Past Reminders") {
     }
   });
 }
+
