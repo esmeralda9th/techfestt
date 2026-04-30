@@ -24,7 +24,7 @@ body {
  
 nav ul{
     position: fixed;
-    background-color: #007bff;
+    background-color: #c2d2e4;
     padding: 7px;
     display: flex;
     justify-content: center;
@@ -41,7 +41,7 @@ nav ul{
  
 nav a:hover {
     color: white;
-    background-color: rgb(12, 15, 148);
+    background-color: rgb(197, 197, 237);
     transform: scale(1.05);
 }
  
@@ -74,7 +74,7 @@ nav li {
  
 .input-container button{
     padding: 10px 23px;
-    background: #007bff;
+    background: #dde1af;
     color: rgb(255, 255, 255);
     border: none;
     cursor: pointer;
@@ -82,7 +82,7 @@ nav li {
 }      
  
 button:hover {
-    background: #a1b4c6;
+    background: #7e93a5;
 }
  
 .container{

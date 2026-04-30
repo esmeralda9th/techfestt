@@ -24,7 +24,7 @@ body {
 
 .task {
     padding: 10px;
-    background: rgb(255, 255, 255);
+    background: rgb(223, 217, 131);
     margin: 5px 0;
     border-radius: 5px;
     display: flex;
@@ -38,7 +38,7 @@ body {
 
 nav ul{
     position: fixed;
-    background-color: #007bff;
+    background-color: #b3c9e2;
     padding: 7px;
     display: flex;
     justify-content: center;
@@ -55,7 +55,7 @@ nav ul{
  
 nav a:hover {
     color: white;
-    background-color: rgb(12, 15, 148);
+    background-color: rgb(175, 229, 200);
     transform: scale(1.05);
 }
  
