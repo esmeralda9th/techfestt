@@ -85,7 +85,6 @@ function addTask() {
   var input = document.querySelector(".input-container input");
   var text = input.value.trim();
 
-
   var date = document.querySelector(".date-input").value;
   var time = document.querySelector(".time-input").value;
 
@@ -96,8 +95,6 @@ function addTask() {
     id: Date.now(),
     text: text,
     completed: false,
-    
-   
     date: date,
     time: time
   };
@@ -107,7 +104,6 @@ function addTask() {
   renderTasks();
 
   input.value = "";
-
   document.querySelector(".date-input").value = "";
   document.querySelector(".time-input").value = "";
 }
@@ -206,3 +202,55 @@ if (document.title === "Past Reminders") {
   });
 }
 
+// ============================================
+// 🔔 NOTIFICACIONES TIPO APP (AGREGADO)
+// ============================================
+
+// Pedir permiso
+function requestNotificationPermission() {
+  if ("Notification" in window) {
+    if (Notification.permission !== "granted") {
+      Notification.requestPermission();
+    }
+  }
+}
+
+// Mostrar notificación
+function showNotification(task) {
+  if (Notification.permission === "granted") {
+    new Notification("⏰ Reminder", {
+      body: task.text,
+      icon: "https://cdn-icons-png.flaticon.com/512/1827/1827392.png"
+    });
+  }
+}
+
+// Revisar recordatorios
+function checkRemindersPro() {
+  var tasks = getTasks();
+  var now = new Date();
+
+  for (var i = 0; i < tasks.length; i++) {
+    var task = tasks[i];
+
+    if (task.date && task.time && !task.completed) {
+      var taskDateTime = new Date(task.date + "T" + task.time);
+
+      if (now >= taskDateTime && !task.notified) {
+        showNotification(task);
+        task.notified = true;
+      }
+    }
+  }
+
+  saveTasks(tasks);
+}
+
+// Activar al cargar
+document.addEventListener("DOMContentLoaded", function () {
+  requestNotificationPermission();
+  checkRemindersPro();
+});
+
+// Revisar cada minuto
+setInterval(checkRemindersPro, 60000);
