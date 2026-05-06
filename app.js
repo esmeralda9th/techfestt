@@ -75,8 +75,10 @@ function renderTasks() {
   var inputContainer = document.querySelector(".input-container");
 
   for (var i = tasks.length - 1; i >= 0; i--) {
-    var taskEl = createTaskElement(tasks[i]);
-    inputContainer.insertAdjacentElement("afterend", taskEl);
+    if (!tasks[i].completed) {
+      var taskEl = createTaskElement(tasks[i]);
+      inputContainer.insertAdjacentElement("afterend", taskEl);
+    }
   }
 }
 
