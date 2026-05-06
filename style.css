@@ -1,7 +1,7 @@
 body {
     font-family: Arial, sans-serif;
     max-width: 500px;
-    margin: 50px auto;
+    margin: 0px auto;
     padding: 20px;
     display: flex; 
     flex-direction: column; 
@@ -28,15 +28,14 @@ nav ul{
     padding: 7px;
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 10px;
     margin-top: 0px;
     color: rgb(255, 255, 255);
     font-size: larger;
     flex-direction: row;
-    position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
+    min-width:100%;
 }
  
 nav a:hover {
@@ -116,9 +115,9 @@ button:hover {
     align-items: center;
     width: 250px;  
 }
+
 .task input {
     opacity: 1;
-
 }
 
 #all_complete{

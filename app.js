@@ -74,7 +74,6 @@ function renderTasks() {
   // Insertar tareas después del input-container
   var inputContainer = document.querySelector(".input-container");
 
-  // Las insertamos en orden inverso para que salgan en el orden correcto
   for (var i = tasks.length - 1; i >= 0; i--) {
     var taskEl = createTaskElement(tasks[i]);
     inputContainer.insertAdjacentElement("afterend", taskEl);
@@ -117,6 +116,15 @@ function markAllComplete() {
   }
   saveTasks(tasks);
   renderTasks();
+}
+
+
+//---eliminar recordatorios---//
+function markAllComplete(){
+  var tasks = getTasks();
+ if (e.target.tagname==="li"){
+  e.target.remove();
+ }
 }
 
 // ============================================
@@ -202,9 +210,9 @@ if (document.title === "Past Reminders") {
   });
 }
 
-// ============================================
-// 🔔 NOTIFICACIONES TIPO APP (AGREGADO)
-// ============================================
+// ===========================================
+// Notificaciones
+// ===========================================
 
 // Pedir permiso
 function requestNotificationPermission() {
