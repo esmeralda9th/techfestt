@@ -1,7 +1,7 @@
 body {
     font-family: Arial, sans-serif;
     max-width: 500px;
-    margin: 0px auto;
+    margin: 55px auto;
     padding: 20px;
     display: flex; 
     flex-direction: column; 
@@ -10,7 +10,7 @@ body {
 
 .post{
     border: 6px solid #A7C7E7;
-    background: white;
+    background: rgba(224, 228, 181, 0.815);
 }
  
 nav ul{
@@ -80,24 +80,14 @@ button:hover {
  
 .button{
    position: absolute;
-    bottom: 5px;  
+    bottom: 100px;  
 }
  
-.container-speak{
-    margin-top: 50px;
-    position: fixed;
-    bottom: 5px;
-    left: 5px;
-}
-
-.speak {
-    padding: 25%;
-}
 
 .task {
     padding: 10px;
     background: #FFFFFF;
-    margin: 5px 0;
+    margin: 20px;
     border-radius: 10px;
     border: 2px solid #A7C7E7;
     display: flex;
@@ -110,8 +100,7 @@ button:hover {
 }
 
 #all_complete{
-    margin-top: 10px;
-
+    margin-top: 20px;
 }
 
 body {
